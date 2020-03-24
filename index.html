@@ -8,6 +8,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Nprogress Demo</title>
     <style>
+        body {
+            margin: 10px;
+        }
+
         .card {
             margin: 25px;
         }
@@ -15,7 +19,7 @@
 </head>
 
 <body>
-
+    <button class="btn btn-primary" onclick="loadContent()">Inhalt nachladen</button>
     <div id="content"></div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>

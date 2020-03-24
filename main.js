@@ -39,5 +39,3 @@ const loadContent = async () => {
         contentWrapper.appendChild(htmlToElement(postMarkup));
     })
 };
-
-window.onload = loadContent;
