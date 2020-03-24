@@ -38,8 +38,8 @@ const NProgressWrapper = {
 const onRequestSuccess = (request) => {
     request._myId = myId++;
 
-    //NProgressWrapper.addRequest(request);
-    NProgress.start();
+    NProgressWrapper.addRequest(request);
+    //NProgress.start();
 
     return request;
 };
@@ -47,15 +47,15 @@ const onRequestSuccess = (request) => {
 const onRequestError = null;
 
 const onResponseSuccess = (response) => {
-    //NProgressWrapper.removeRequest(response.config);
-    NProgress.done();
+    NProgressWrapper.removeRequest(response.config);
+    //NProgress.done();
 
     return response;
 };
 
 const onResponseError = (error) => {
-    //NProgressWrapper.removeRequest(error.response.config);
-    NProgress.done();
+    NProgressWrapper.removeRequest(error.response.config);
+    //NProgress.done();
 
     return error;
 };
@@ -69,8 +69,9 @@ api.interceptors.response.use(onResponseSuccess, onResponseError);
 
 const getPosts = async () => {
     const postsRequest = await api.get('/posts');
+    let posts = postsRequest.data;
 
-    posts = postsRequest.data.map(async item => {
+    posts = posts.map(async item => {
         const post = item;
 
         const userRequest = await api.get(`/users/${post.userId}`);
