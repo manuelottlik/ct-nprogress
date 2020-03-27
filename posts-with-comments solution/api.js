@@ -1,6 +1,5 @@
-let myId = 1;
-
 const NProgressWrapper = {
+    requestId: 1,
     pendingRequests: [],
 
     maxAmount: 0,
@@ -36,7 +35,7 @@ const NProgressWrapper = {
 }
 
 const onRequestSuccess = (request) => {
-    request._myId = myId++;
+    request._myId = NProgressWrapper.requestId++;
 
     NProgressWrapper.addRequest(request);
     //NProgress.start();
@@ -68,7 +67,7 @@ api.interceptors.request.use(onRequestSuccess, onRequestError);
 api.interceptors.response.use(onResponseSuccess, onResponseError);
 
 const getPosts = async () => {
-    const { data: posts } = await api.get('/posts');
+    let { data: posts } = await api.get('/posts');
 
     posts = posts.map(async item => {
         const post = item;
