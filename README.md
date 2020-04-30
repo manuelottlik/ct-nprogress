@@ -3,8 +3,6 @@
 Beispielprojekt zum Artikel "" aus c't 2020, Heft XX.
 
 
-Beispiel für einzelne HTTP-Anfragen
-Beispiel für parallele HTTP-Anfragen
 
 |Thema|Ordner|
 | ------- | ------- |
