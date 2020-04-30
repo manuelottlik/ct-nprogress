@@ -1,2 +1,5 @@
 # ct-nprogress
-Beispielprojekt zum Artikel "" aus dem c't Heft 3434.
+
+Beispielprojekt zum Artikel "" aus c't 2020, Heft XX.
+
+
