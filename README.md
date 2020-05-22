@@ -1,6 +1,6 @@
 # ct-nprogress
 
-Beispielprojekt zum Artikel "" aus c't 2020, Heft XX.
+Beispielprojekt zum Artikel "Schmal, aber oho" aus c't 2020, Heft 12.
 
 
 
